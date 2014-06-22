@@ -1,12 +1,5 @@
-# Wine Cellar Application #
+#A Property showcase Application for value add realty #
 
-The Wine Cellar application is documented [here](http://coenraets.org).
+The property showcase application is simple app built with angular js, restangualr js, mysql and PHP.
 
-This is sample CRUD application built with Angular.js
-
-Set Up:
-
-1. Create a MySQL database name "cellar".
-2. Execute cellar.sql to create and populate the "wine" table:
-
-	mysql cellar -uroot < cellar.sql
+This is a basic API consuming app with lead management included and a basic CRM application.
