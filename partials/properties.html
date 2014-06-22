@@ -1,0 +1,14 @@
+<input type="text" ng-model="search">
+
+    <div class="row-fluid" >
+        <div class="span3" ng-repeat="property in properties | filter:search | orderBy:'name'">
+            <a href="#properties/edit/{{property.id}}" class="thumbnail plain" style="text-align: center;">
+    <img src="images/slides/bali.jpg" height="150" width="125" alt="">
+    <h5>{{property.name}}</h5>
+    <p> {{property.address}} </p><br/>
+    <i class="icon-globe"></i> {{property.location}}
+</a>
+         </div>
+    </div>
+
+

@@ -1,0 +1,4 @@
+[30-Jan-2014 04:06:26] PHP Parse error:  syntax error, unexpected T_FUNCTION in /home/govalxui/public_html/api/admin/index.php on line 42
+[30-Jan-2014 04:07:24] PHP Parse error:  syntax error, unexpected T_FUNCTION in /home/govalxui/public_html/api/admin/index.php on line 42
+[30-Jan-2014 04:11:04] PHP Parse error:  syntax error, unexpected T_FUNCTION in /home/govalxui/public_html/api/admin/index.php on line 13
+[10-Jun-2014 12:30:09 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20447311 bytes) in /home/valueadd/public_html/realtyadmin/api/admin/index.php on line 126

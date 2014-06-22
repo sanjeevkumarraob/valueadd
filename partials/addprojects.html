@@ -1,0 +1,146 @@
+<div class="logo">
+    <h4><a href="#/">Go<strong>ValueAdd</strong></a></h4>
+</div>
+
+<ng-include src="'partials/navbar.html'"></ng-include>
+<div class="wrap">
+<ng-include src="'partials/header.html'"></ng-include>
+
+<div class="content container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <h2 class="page-title">Add Project </h2>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span7">
+            <section class="widget">
+                <header>
+                    <h4><i class="icon-user"></i> Project Profile <small> <span ng-show="project.id">- {{project.id}}</span></small></h4>
+                </header>
+                <div class="body">
+                    <form id="user-form" class="form-horizontal label-left" novalidate="novalidate" data-validate="parsley" >
+                        <fieldset>
+                            <legend class="section">Project Info</legend>
+                            <div class="control-group">
+                                <label class="control-label" for="name">Project Name</label>
+                                <div class="controls controls-row">
+                                    <input type="text" id="name" name="name" ng-model="project.name" class="span11" />
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="description">Description</label>
+                                <div class="controls controls-row">
+                                    <textarea ng-model="project.description" id="description" name="description" rows="4" required="required" class="span11" ></textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+											<label class="control-label" for="logo">logo</label>
+											<div class="controls controls-row">
+													<input class="span11"
+														id="logo" type="text"
+														 ng-model="project.logo" >
+											</div>
+				            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="location">Property <span class="required">*</span></label>
+                                <div class="controls controls-row">
+                                    <select class="span11" ng-model="project.propertyid"><option ng-repeat="property in propertieslist" value="{{property.id}}">{{property.name}}</option></select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+											<label class="control-label" for="status">Project Status</label>
+											<div class="controls controls-row">
+													<select id="type" class="span11" ng-model="project.status"><option value="active">Active</option><option value="sold">Sold</option></select>
+											</div>
+				            </div>
+
+                            <div class="control-group">
+                                    <div class="controls">
+                                        <label class="checkbox">
+                                        <input type="checkbox" id="hotproject" name="hotproject" ng-model="project.hotproject" />Hot Property </label>
+
+                                    </div>
+                                </div>
+
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn">Cancel</button>
+                            <button class="btn btn-primary" ng-click="save()">Save
+							changes</button>
+                            <button ng-click="destroy()"
+                ng-show="project.id" class="btn btn-danger">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+<!--
+        <div class="span5">
+            <section class="widget">
+                <header>
+                    <h4><i class="icon-cogs"></i> Account settings</h4>
+                    <div class="actions">
+                        <button class="btn btn-mini btn-inverse"><i class="icon-arrow-down"></i> View more</button>
+                    </div>
+                </header>
+                <div class="body">
+                    <form method="post" />
+                        <fieldset>
+                                <div class="control-group">
+                                    <label for="exp" class="control-label">Account expiration date</label>
+                                    <div class="controls">
+                                        <input id="exp" class="input-block-level date-picker" type="text" name="exp" value="" />
+                                        <span class="help-block">Bootstrap datepicker</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label for="website" class="control-label">Associate to Website</label>
+                                    <div class="controls">
+                                        <select id="website" class="chzn-select select-block-level" data-width="off" data-minimum-results-for-search="10" name="website">
+                                            <option selected="selected" value="0" />Admin
+                                            <option value="1" />Main Website
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label for="created_by" class="control-label">Created By</label>
+                                    <div class="controls">
+                                        <input id="created_by" class="input-block-level" type="text" name="created_by" value="Admin" disabled="disabled" />
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label for="groups" class="control-label">Account Group</label>
+                                    <div class="controls">
+                                        <select id="groups" name="groups" class="chzn-select select-block-level" multiple="" data-placeholder="Choose one or more groups for account" data-width="off">
+                                            <option value="0" />Subscriber
+                                            <option value="1" />Retailer
+                                            <option value="2" />Supplier
+                                            <option value="3" />Manager
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <label class="checkbox">
+                                        <input type="checkbox" id="change-password" name="change-password" />
+                                            Request password change
+                                        </label>
+                                    </div>
+                                </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </div>
+-->
+    </div>
+</div>
+
+				<!-- </div><!--/span-->
+				<!--</div><!--/row-->
+
+
+		<hr>
+  </div>

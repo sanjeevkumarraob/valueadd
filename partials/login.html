@@ -1,0 +1,58 @@
+
+<div class="single-widget-container">
+
+    <section class="widget login-widget">
+        <header class="text-align-center">
+            <h4>Login to your account</h4>
+        </header>
+        <div class="body">
+          <div class="alert alert-error" ng-show="errorMessage" ng-click="close()">
+          <button type="button"  class="close" data-dismiss="alert">&times;</button>
+            {{errorMessage}}
+          </div>
+            <form name="form" class="no-margin" method="get" novalidate>
+                <fieldset>
+                    <div class="control-group no-margin">
+                        <label class="control-label" for="email">User Name</label>
+                        <div class="control">
+                            <div class="input-prepend input-padding-increased">
+                                <span class="add-on">
+                                    <i class="eicon-user icon-large"></i>
+                                </span>
+                                <input id="username" name="uName" type="text" ng-model="user.username" placeholder="Username" required >
+                                <div ng-show="form.uName.$dirty && form.uName.$invalid">Invalid:
+      <span ng-show="form.uName.$error.required">Please login with proper username</span>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="password">Password</label>
+                        <div class="control">
+                            <div class="input-prepend input-padding-increased">
+                                <span class="add-on">
+                                    <i class="icon-lock icon-large"></i>
+                                </span>
+                                <input id="password" type="password" ng-model="user.password" placeholder="Password" />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-block btn-large btn-danger" ng-disabled="form.$invalid || isUnchanged(user)" ng-click="signIn()">
+                        <span class="small-circle"><i class="icon-caret-right"></i></span>
+                        <small>Sign In</small>
+                    </button>
+                    <div class="forgot"><a class="forgot" href="#/forgotpassword">Forgot Username or Password?</a></div>
+                </div>
+            </form>
+        </div>
+
+<!--         <footer>
+            <div class="facebook-login">
+                <a href="index.html"><span><i class="icon-facebook-sign icon-large"></i> LogIn with Facebook</span></a>
+            </div>
+        </footer> -->
+    </section>
+</div>
